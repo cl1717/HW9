@@ -1,0 +1,71 @@
+[
+	{
+	"title": "Afterglow",
+	"artist": "Ed Sheeran",
+	"genre": ["Ballads"],
+	"release": 2020
+    },
+
+    {
+    "title": "All Of Me",
+    "artist": "John Legend",
+    "genre": ["Ballads"],
+    "release": 2013
+    },
+
+    {
+    "title": "Just The Way You Are",
+    "artist": "Billy Joel",
+    "genre": ["Ballads"],
+    "release": 2010
+    },
+
+    {
+    "title": "Isn't She Lovely",
+    "artist": "Stevie Wonder",
+    "genre": ["Contemporary"],
+    "release": 1976
+    },
+
+    {
+    "title": "Lovely Day",
+    "artist": "Bill Withers",
+    "genre": ["Contemporary"],
+    "release": 1977
+    },
+
+    {
+    "title": "Sunday Morning",
+    "artist": "Maroon 5",
+    "genre": ["Contemporary"],
+    "release": 2007
+    },
+
+    {
+    "title": "Angel in White Unaware",
+    "artist": "Michael Shynes",
+    "genre": ["Pop", "Rock"],
+    "release": 2020
+    },
+
+    {
+    "title": "Christmas Brought Me You",
+    "artist": "Michael Shynes",
+    "genre": ["Jazz"],
+    "release": 2021
+    },
+
+    {
+    "title": "Mine",
+    "artist": "Taylor Swift",
+    "genre": ["Country"],
+    "release": 2010
+    },
+
+    {
+    "title": "When Stars Go Blue",
+    "artist": "Tim McGraw",
+    "genre": ["Country"],
+    "release": 2002
+    }
+]
