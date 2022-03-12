@@ -59,8 +59,24 @@ function filterSongs() {
     document.getElementById("filterSongs").innerHTML = filteredHTML;  
 
 }
-
 </script>
+
+<style>
+    #list, #filter {
+        display: inline-block;
+    }
+    #filter {
+        font-weight: bold;
+        border: 0;
+        border-radius: 5px;
+        background-color: rgb(155, 95, 95);
+        color: white;
+    }
+    #filter:hover{
+        background-color: rgb(180, 131, 131);
+        cursor: pointer;
+    }
+</style>
 </head>
 
 
