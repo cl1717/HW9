@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>JSON Song List</title>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+
+var songs;
+
+function loadFile() {
+    request = new XMLHttpRequest();
+    request.open("GET", "https://cl1717.github.io/HW9/songs.json", true);
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+            result = request.responseText;
+            songs = JSON.parse(result);
+            strHTML = "";
+            songs.forEach(function(songs) {
+                strHTML += songs.title + "<br /> Artist: " + songs.artist + "<br /> Genre(s): " + songs.genre 
+                            + "<br / > Released " + songs.release + "<br /> <br / >";
+            });
+            document.getElementById("serialized").innerHTML = result;  
+            document.getElementById("userFriendly").innerHTML =strHTML;  
+            genreList = [];
+            //Go through each song
+            songs.forEach(function(song) {
+                //Go through each genre of the song, add it to genreList if it's not already there
+                song.genre.forEach(function(genreName) {
+                    if (!genreList.includes(genreName)) {
+                        genreList.push(genreName);
+                    }       
+                });
+            });
+            makeSelect = "<select id = 'selectGenre' name='selectGenre' size ='1' >";
+            for (i = 0; i < genreList.length; i++) {
+                makeSelect += "<option>" + genreList[i] + "</option>";
+            }
+            makeSelect += "</select>";
+            document.getElementById("list").innerHTML = makeSelect;
+        }
+    }
+    request.send();
+}
+
+function filterSongs() {
+    genreChosen = $("#selectGenre option:selected").text();
+    filteredHTML = ""
+    songs.forEach(function(song){
+        song.genre.forEach(function(genreName) {
+            if (genreChosen == genreName) {
+                filteredHTML += song.title + "<br /> Artist: " + song.artist + "<br /> Genre(s): "
+                                + song.genre + "<br / > Released " + song.release + "<br /> <br / >";
+            }
+        });
+    });
+    document.getElementById("filterSongs").innerHTML = filteredHTML;  
+
+}
+
+</script>
+</head>
+
+
+<body onload="loadFile()">
+
+	<h1>Song List</h1>
+    <h2  style="color:brown">Serialized Display</h2>
+    <div id="serialized">&nbsp</div>
+    <h2  style="color:brown">User-friendly Display</h2>
+    <div id="userFriendly">&nbsp</div>
+    <h2  style="color:brown">Filter Songs by Genre</h2>
+    <form id="list"></form>
+    <input type="button" id="filter" value="Filter by genre" onclick="filterSongs()">
+    <div id="filterSongs">&nbsp</div>
+
+</body>
+</html>

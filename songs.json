@@ -2,21 +2,21 @@
 	{
 	"title": "Afterglow",
 	"artist": "Ed Sheeran",
-	"genre": ["Ballads"],
+	"genre": ["Ballad"],
 	"release": 2020
     },
 
     {
     "title": "All Of Me",
     "artist": "John Legend",
-    "genre": ["Ballads"],
+    "genre": ["Ballad"],
     "release": 2013
     },
 
     {
     "title": "Just The Way You Are",
     "artist": "Billy Joel",
-    "genre": ["Ballads"],
+    "genre": ["Ballad"],
     "release": 2010
     },
 
@@ -58,7 +58,7 @@
     {
     "title": "Mine",
     "artist": "Taylor Swift",
-    "genre": ["Country"],
+    "genre": ["Country", "Pop"],
     "release": 2010
     },
 
